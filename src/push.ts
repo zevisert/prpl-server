@@ -19,7 +19,12 @@ import * as validUrl from 'valid-url';
  * JSON format for a multi-file push manifest.
  */
 export interface PushManifestData {
-  [pattern: string]: {[resource: string]: {type: string; weight?: number;}}
+  [pattern: string]: {
+    [resource: string]: {
+      type: string,
+      weight?: number,
+    }
+  };
 }
 
 /**

@@ -12,6 +12,9 @@
  * http://polymer.github.io/PATENTS.txt
  */
 
+import ansi = require('ansi-escape-sequences');
+import * as commandLineArgs from 'command-line-args';
+import * as commandLineUsage from 'command-line-usage';
 import * as compression from 'compression';
 import * as express from 'express';
 import * as fs from 'fs';
@@ -20,10 +23,7 @@ import * as path from 'path';
 
 import * as prpl from './prpl';
 
-const commandLineArgs = require('command-line-args') as any;
-const commandLineUsage = require('command-line-usage') as any;
-const ansi = require('ansi-escape-sequences') as any;
-const rendertron = require('rendertron-middleware') as any;
+import rendertron = require('rendertron-middleware');
 
 const argDefs = [
   {
@@ -133,7 +133,7 @@ export function run(argv: string[]) {
 
   if (args['cache-control']) {
     config.cacheControl = args['cache-control'];
-  };
+  }
 
   const app = express();
 

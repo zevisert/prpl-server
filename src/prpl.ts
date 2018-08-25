@@ -86,7 +86,7 @@ export function makeHandler(root?: string, config?: Config): (
 
   const cacheControl = (config && config.cacheControl) || 'max-age=60';
   const unregisterMissingServiceWorkers =
-      (config && config.unregisterMissingServiceWorkers != undefined) ?
+      (config && config.unregisterMissingServiceWorkers !== undefined) ?
       config.unregisterMissingServiceWorkers :
       true;
   const forwardErrors = config && config.forwardErrors;
@@ -165,9 +165,9 @@ self.addEventListener('activate', () => self.registration.unregister());`);
     }
 
     if (build && build.pushManifest) {
-      // Set nopush attribute if the client doesn't support push. This will still
-      // set preload headers, but it provides a signal to the server to not use
-      // server push.
+      // Set nopush attribute if the client doesn't support push. This will
+      // still set preload headers, but it provides a signal to the server to
+      // not use server push.
       const nopush = !clientCapabilities.has('push');
       const linkHeaders = build.pushManifest.linkHeaders(urlPath, nopush);
       if (urlPath !== fileToSend) {
@@ -225,9 +225,7 @@ class Build {
   constructor(
       private configOrder: number,
       public requirements: Set<capabilities.BrowserCapability>,
-      public entrypoint: string,
-      buildDir: string,
-      serverRoot: string) {
+      public entrypoint: string, buildDir: string, serverRoot: string) {
     // TODO Push manifest location should be configurable.
     const pushManifestPath = path.join(buildDir, 'push-manifest.json');
     const relPath = path.relative(serverRoot, pushManifestPath);

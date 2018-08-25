@@ -314,8 +314,8 @@ suite('prpl server', function() {
 
       app.use(
           (error: httpErrors.HttpError,
-           _request: any,
-           response: any,
+           _request: express.Request,
+           response: express.Response,
            _next: express.NextFunction) => {
             response.statusCode = error.status;
             response.setHeader('Content-Type', 'text/plain');
