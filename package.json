@@ -1,8 +1,8 @@
 {
-  "name": "prpl-server",
-  "version": "1.4.2",
+  "name": "@zevisert/prpl-server",
+  "version": "1.4.3",
   "description": "A Node implementation of the PRPL pattern for serving Progressive Web Apps",
-  "repository": "git+https://github.com/Polymer/prpl-server-node.git",
+  "repository": "git+https://github.com/zevisert/prpl-server-node.git",
   "main": "lib/prpl.js",
   "types": "lib/prpl.d.ts",
   "bin": "bin/prpl-server",
@@ -26,7 +26,7 @@
   ],
   "dependencies": {
     "ansi-escape-sequences": "^5.1.2",
-    "browser-capabilities": "^1.1.4",
+    "differential-browsers": "^1.1.4",
     "command-line-args": "^5.1.1",
     "command-line-usage": "^6.1.0",
     "compression": "^1.7.4",

@@ -12,7 +12,7 @@
  * http://polymer.github.io/PATENTS.txt
  */
 
-import * as capabilities from 'browser-capabilities';
+import * as capabilities from 'differential-browsers';
 import * as express from 'express';
 import * as fs from 'fs';
 import * as http from 'http';

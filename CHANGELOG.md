@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 <!-- ## Unreleased -->
 <!-- Add new, unreleased changes here. -->
+## [1.4.3] 2020-08-12
+- Replace browser-capabilities with updated fork (differential-browsers).
 
 ## [1.4.2] 2020-08-12
 - Update dependencies.
